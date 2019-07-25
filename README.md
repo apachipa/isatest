@@ -4,7 +4,7 @@ This lampstack is created from wordpress cloudformation template.
 Due to time constraints i had to keep it simple.
 This design is not fully secure. Note: Port 80 redirection to 443 is not configured. Also there are no WAF policies applied (can use Cloudflare free edition).
 
-Hight level Environment:
+EnvironmentInformation:
 - VPC with 3 subnets (one subnet in each Zone) in Sydney Region.
 - 3 Amazon Linux Instances with Apache, PHP and MySQL ( RDS) installed and configured.
 - ELB with listener post and Target host group configured. 
