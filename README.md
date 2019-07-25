@@ -4,7 +4,7 @@ This lampstack is created from wordpress cloudformation template.
 Due to time constraints i had to keep it simple.
 This design is not fully secure. Note: Port 80 redirection to 443 is not configured. Also there are no WAF policies applied (can use Cloudflare free edition).
 
-This to consider for cost effiency:
+Suggestion/s to consider for cost effiency:
 - Solution could have leveraged EBS and run php app in container with Aurora DB (Primary Replica) in Muli-AZ.
 - The same could be done using ECS and or EKS services. 
 
