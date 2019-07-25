@@ -8,7 +8,12 @@ This to consider for cost effiency:
 - Solution could have leveraged EBS and run php app in container with Aurora DB (Primary Replica) in Muli-AZ.
 - The same could be done using ECS and or EKS services. 
 
+Tools to consider for Design and auto code generation:
+ - Cloudforma
+ - Cloudformation Designer
+ 
 Things that are done Manual:
 
 - VPC, Subnets
 - RDS DB Groups. 
+- RDS Security Group for myaurora/postgress
