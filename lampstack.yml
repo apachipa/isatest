@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Mutli Availability Zone Lamp Stack - Ashok. Assumption is VPC is created with Multi AZ subnets and the lampstack will be deployed into that envronement with HA considerations. 
+Parameters:
+  VpcId:
+    Type: 'AWS::EC2::VPC::Id' #Fectches Existing VPC
+    Description: Existing VPC ID
+    ConstraintDescription: VPC ID for an existing VPC.
+  Subnets:
+    Type: 'List<AWS::EC2::Subnet::Id>' #Fecteches Available subnets under that VPC
+    Description: The list of SubnetIds in your Virtual Private Cloud (VPC)
+    ConstraintDescription: >-
+      Two existing subnets in different availability zones.
+  KeyName:
+    Description: EC2 KeyPair to enable SSH access to the instances
+    Type: 'AWS::EC2::KeyPair::KeyName' #Fecteches ec2 keypair in the region
+    ConstraintDescription: must be the name of an existing EC2 KeyPair.
