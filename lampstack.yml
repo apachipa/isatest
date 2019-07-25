@@ -422,7 +422,7 @@ Mappings:
       HVM64: ami-05b3bcf7f311194b3
       HVMG2: ami-0e46ce0d6a87dc979
     ap-southeast-2:
-      HVM64: ami-02fd0b06f06d93dfc
+      HVM64: ami-011b3ccf1bd6db744
       HVMG2: ami-0c0ab057a101d8ff2
     ap-south-1:
       HVM64: ami-0ad42f4f66f6c1cc9
@@ -504,8 +504,8 @@ Resources:
         config:
           packages:
             yum:
-              httpd: [2.4]
-              php: [7.0]
+              httpd: []
+              php: []
               php-mysql: []
           files:
             /var/www/html/index.php:
