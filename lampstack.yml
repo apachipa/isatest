@@ -504,8 +504,8 @@ Resources:
         config:
           packages:
             yum:
-              httpd: []
-              php: []
+              httpd: [2.4]
+              php: [7.0]
               php-mysql: []
           files:
             /var/www/html/index.php:
