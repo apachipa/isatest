@@ -13,4 +13,30 @@ Parameters:
   KeyName:
     Description: EC2 KeyPair to enable SSH access to the instances
     Type: 'AWS::EC2::KeyPair::KeyName' #Fecteches ec2 keypair in the region
-    ConstraintDescription: must be the name of an existing EC2 KeyPair.
+    ConstraintDescription: Name of existing EC2 KeyPair.
+  InstanceType:
+    Description: WebServer EC2 instance type
+    Type: String
+    Default: t2.small
+    AllowedValues:
+      - t2.small
+    ConstraintDescription: WebServer EC2 instance type.
+  SSHLocation:
+    Description: ' The IP address range that can be used to SSH to the EC2 instances'
+    Type: String
+    MinLength: '9'
+    MaxLength: '18'
+    Default: 0.0.0.0/0
+    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
+    ConstraintDescription: Vaild IP CIDR range
+Mappings:
+  AWSInstanceType2Arch:
+     t2.small:
+      Arch: HVM64
+  AWSInstanceType2NATArch:
+    t2.small:
+      Arch: NATHVM64
+  AWSRegionArch2AMI:
+    ap-southeast-2:
+      HVM64: ami-02fd0b06f06d93dfc
+      HVMG2: ami-0c0ab057a101d8ff2
