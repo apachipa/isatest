@@ -24,7 +24,7 @@ Suggestion/s to consider for cost effiency:
 - The same could be done using ECS and or EKS services or Lambda functions. 
 
 Tools to consider for Design and auto code generation:
- - Cloudforma
+ - Cloudformer
  - Cloudformation Designer
 
 There are two templates, One for Wordpress which is in .json format and the other is simple php app which is in yml. 
