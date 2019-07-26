@@ -17,7 +17,7 @@ Things that are done Manual:
 - VPC, Subnets
 - IAM Role for S3 bucket (Cloudformation Template).
 - RDS DB Groups. 
-- RDS Security Group for myaurora/postgress
+- RDS Security Group for MySQL.
 
 Suggestion/s to consider for cost effiency:
 - Solution could have leveraged EBS and run php app in container with Aurora DB (Primary Replica) in Muli-AZ.
