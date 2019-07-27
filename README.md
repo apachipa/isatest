@@ -11,6 +11,7 @@ Environment Information:
 - Autoscaling group to scale up to 3 instances (this is test environment and kept maximum as 3 with 3 deployed in 3 AZ sydney region)
 - Route 53 with A record (testcode.experimentbox.net) pointing to ELB. 
 - S3 bucket which holds cloudformation template with IAM Role set on it.
+- Required Security Groups between External connectivity to Web Servers, Web Servers to MYSQL DB (RDS) 
 
 Things that are done Manual:
 
